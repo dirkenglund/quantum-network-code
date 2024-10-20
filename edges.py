@@ -28,4 +28,12 @@ edges = [
     Edge("26-368", "NOTAROS", "2 780HP", 95, -3),       # 26-368 to Notaros Lab
     Edge("26-368", "NOTAROS", "2 SMF-28", 90, -3),      # 26-368 to Notaros Lab
     Edge("FH576-A", "BU", "1 SMF-28", 110, -2),          # Fiber Hub 576-A to Boston University
-    Edge("BU", "UMD", "2 SMF-28", 150, -1.5
+    Edge("BU", "UMD", "2 SMF-28", 150, -1.5),             # Boston University to University of Maryland
+    Edge("COQREATE", "TRINITY", "1 SMF-28", 200, -1.8),   # CoQreate (Ireland) to Trinity College (Ireland)
+    Edge("UMASS", "UO", "2 SMF-28", 130, -1.7),           # UMass Amherst to University of Oregon
+    Edge("HU", "UMD", "1 SMF-28", 140, -2),               # Howard University to University of Maryland
+    Edge("ENG_LAB", "ATT_HUB", "2 SMF-28", 60, -1.2),     # Englund Lab to AT&T Fiber Hub
+    Edge("ATT_HUB", "MITLL", "3 SMF-28", 80, -1.5),      # AT&T Fiber Hub to MIT Lincoln Lab
+    Edge("ATT_HUB", "HARV", "3 SMF-28", 85, -1.5),        # AT&T Fiber Hub to Harvard
+    Edge("ATT_HUB", "BBN", "3 SMF-28", 90, -1.5),         # AT&T Fiber Hub to BBN Raytheon
+]
