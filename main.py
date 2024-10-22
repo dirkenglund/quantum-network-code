@@ -41,7 +41,10 @@ def add_curved_edge(start, end, label, color='blue', dash_array=None):
     end_node = G.nodes[end]
 
     # Create a curved line effect by adding intermediary points
-    mid_point = [(start_node['pos'][0] + end_node['pos'][0]) / 2, (start_node['pos'][1] + end_node['pos'][1]) / 2 + 0.01]  # Adjust for curvature
+    mid_point = [
+        (start_node['pos'][0] + end_node['pos'][0]) / 2, 
+        (start_node['pos'][1] + end_node['pos'][1]) / 2 + 0.01  # Adjust for curvature
+    ]
     locations = [start_node['pos'], mid_point, end_node['pos']]
 
     folium.PolyLine(locations=locations, color=color, weight=2.5, dash_array=dash_array, popup=label).add_to(m)
@@ -51,7 +54,7 @@ for edge in G.edges(data=True):
     add_curved_edge(edge[0], edge[1], edge[2]['label'], color='blue')
 
 # Add planned links (dashed red lines)
-add_curved_edge("FH576-A", "UA", "Planned Link: Joint Device Development", color='red', dash_array='5, 5')
+add_curved_edge("MIT-FH576-A", "UA", "Planned Link: Joint Device Development", color='red', dash_array='5, 5')
 
 # -------------------- ADD LEGEND --------------------
 
