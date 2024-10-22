@@ -41,10 +41,7 @@ def add_curved_edge(start, end, label, color='blue', dash_array=None):
     end_node = G.nodes[end]
 
     # Create a curved line effect by adding intermediary points
-    mid_point = [
-        (start_node['pos'][0] + end_node['pos'][0]) / 2, 
-        (start_node['pos'][1] + end_node['pos'][1]) / 2 + 0.01  # Adjust for curvature
-    ]
+    mid_point = [(start_node['pos'][0] + end_node['pos'][0]) / 2, (start_node['pos'][1] + end_node['pos'][1]) / 2 + 0.01]  # Adjust for curvature
     locations = [start_node['pos'], mid_point, end_node['pos']]
 
     folium.PolyLine(locations=locations, color=color, weight=2.5, dash_array=dash_array, popup=label).add_to(m)
